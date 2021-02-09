@@ -1,5 +1,9 @@
+# @api public
 module Pundit
   SUFFIX = "Policy"
+
+  # Error that will be raised when authorization has failed
+  class NotAuthorizedError < Error
 
   class << self
     def authorize(user, record, query, policy_class: nil)
